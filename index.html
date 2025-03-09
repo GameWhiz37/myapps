@@ -1,5 +1,42 @@
 <html>
+  <head>
+    <link rel="stylesheet" href="calculator.css">
+    <script type="text/javascript" src="calculator.js"></script>
+  </head>
   <body>
-    hello
+    <table>
+      <tr>
+        <td colspan="4"><span id="displayText">0</span></td>
+      </tr>
+      <tr>
+        <td><button class="topRow" type="button" onclick="clearButtonPressed()">AC</button></td>
+        <td><button class="topRow" type="button">+/-</button></td>
+        <td><button class="topRow" type="button">%</button></td>
+        <td><button class="operator" type="button">÷</button></td>
+      </tr>
+      <tr>
+        <td><button type="button" onclick="buttonPressed('7')">7</button></td>
+        <td><button type="button" onclick="buttonPressed('8')">8</button></td>
+        <td><button type="button" onclick="buttonPressed('9')">9</button></td>
+        <td><button class="operator" type="button">x</button></td>
+      </tr>
+      <tr>
+        <td><button type="button" onclick="buttonPressed('4')">4</button></td>
+        <td><button type="button" onclick="buttonPressed('5')">5</button></td>
+        <td><button type="button" onclick="buttonPressed('6')">6</button></td>
+        <td><button class="operator" type="button">-</button></td>
+      </tr>
+      <tr>
+        <td><button type="button" onclick="buttonPressed('1')">1</button></td>
+        <td><button type="button" onclick="buttonPressed('2')">2</button></td>
+        <td><button type="button" onclick="buttonPressed('3')">3</button></td>
+        <td><button class="operator" type="button" onclick="plusButtonPressed()">+</button></td>
+        <tr>
+          <td colspan="2"><button type="button" onclick="buttonPressed('0')">0</button></td>
+          <td><button type="button">.</button></td>
+          <td><button class="operator" type="button" onclick = "equalButtonPressed()">=</button></td>
+        </tr>
+      </tr>
+    </table>
    </body>
 </html>
