@@ -2,12 +2,16 @@ console.log("Hello");
 
 let workingNumber = "";
 let numberStored;
-let operationPressed;
+let operaterPressed;
 
 function buttonPressed(theButton){
     console.log(theButton);
-
-    workingNumber = workingNumber + theButton;
+    if (workingNumber=="0"){
+        workingNumber = theButton;
+    }
+    else{
+        workingNumber = workingNumber + theButton;
+    }
 
     setDisplayNumber(workingNumber);
 }
@@ -22,12 +26,38 @@ function clearButtonPressed(){
     workingNumber = "";
 }
 
-function plusButtonPressed(){
-    console.log("+");
+function operationButtonPressed(theOperator){
+    console.log(theOperator);
+    operaterPressed = theOperator;
     numberStored = workingNumber;
     workingNumber = "";
 }
 
+
 function equalButtonPressed(){
-    console.log("=")
+    console.log("=");
+    if(operaterPressed=="+"){
+        let result = parseInt(numberStored) + parseInt(workingNumber);
+        setDisplayNumber(result);
+        console.log("result = " + result);
+    }
+
+    if(operaterPressed=="-"){
+        let result = parseInt(numberStored) - parseInt(workingNumber);
+        setDisplayNumber(result);
+        console.log("result = " + result);
+
+    }
+
+    if(operaterPressed=="x"){
+        let result = parseInt(numberStored) * parseInt(workingNumber);
+        setDisplayNumber(result);
+        console.log("result = " + result);
+    }
+
+    if(operaterPressed=="÷"){
+        let result = parseInt(numberStored)/parseInt(workingNumber);
+        setDisplayNumber(result);
+        console.log("result = " + result);
+    }
 }
